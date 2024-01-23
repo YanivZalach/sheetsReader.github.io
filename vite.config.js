@@ -5,7 +5,7 @@ export default defineConfig({
 
   build: {
     // Set the correct base URL here
-    base: '/sheetsReader/', 
+    base: '/sheetsReader.io/', 
   },
 });
 
