@@ -1,3 +1,4 @@
+/* Vars */
 :root {
   --upload-color: #4caf50;
   --background-color: #f2f2f2;
@@ -17,13 +18,18 @@
 
   --table-width: 250px;
   --table-hight: 70px;
+
+  --link-color: #039450;
+  --hover-link-color: #067323;
 }
 
+/* The base body */
 body {
   font-family: 'Arial', sans-serif;
   background-color: var(--background-color);
 }
 
+/* The main app */
 #app {
   margin: 0px auto;
   padding: var(--padding);
@@ -34,6 +40,7 @@ body {
   min-width: var(--min-width);
 }
 
+/* The input place for the file */
 input {
   display: block;
   width: 100%;
@@ -45,14 +52,7 @@ input {
   box-sizing: border-box;
 }
 
-#result {
-  padding: var(--input-padding);
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
-  width: fit-content;
-  height: fit-content;
-}
-
+/* The name of the input file */
 #fileInput {
   cursor: pointer;
   background-color: var(--upload-color);
@@ -62,14 +62,13 @@ input {
   font-size: var(--font-size);
 }
 
-#app input[type="file"]::before {
-  content: 'See spreadsheet file  ';
-  display: inline-block;
-  background-color: var(--upload-color);
-  color: white;
-  padding: var(--input-padding) * 2 var(--input-padding) * 4;
+/* The output place for the file */
+#result {
+  padding: var(--input-padding);
+  border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
-  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
 }
 
 #result::before {
@@ -77,11 +76,52 @@ input {
   font-weight: bold;
 }
 
+/* Separating between exel sheets */
+hr{
+	background-color: var(--upload-color);
+	border-radius: 5px;
+	padding: var(--padding);
+}
+
+/* The sheets list */
+a {
+  color: var(--link-color);
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+  align-items: center;
+  text-align: left;
+  font-weight: bold;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transition: transform 5s ease-in;
+}
+
+/* Hover effect for the 'a' element */
+a:hover {
+  color: var(--hover-link-color);  /* Change text color on hover */
+  background-color: var(--input-background-color);
+}
+
+ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+li {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+
 /* The style sheet */
 table {
     display: inline-flex;
     table-layout: fixed; /* Ensure fixed layout */
-    width: 100%;
+    width: 100%;  /* Max good width */
 }
 
 td {
@@ -91,29 +131,13 @@ td {
 	height: var(--table-hight);
     box-sizing: border-box; /* Include padding and border in the total width/height */
 
-    /* Ensure text does not overflow and add scrolling if necessary */
+    /* Ensure text does not overflow and add scrolling if necessary - great for reading exel */
     overflow: scroll;
 }
 
-/* Optional: Add styling for the header cells */
 th {
     background-color: #f2f2f2;
     text-align: center;
     font-weight: bold;
 }
 
-/* Separating between exel sheets */
-hr{
-	padding: var(--padding);
-}
-
-a {
-  color: #0077cc; /* Set the text color to a blue shade */
-  text-decoration: none; /* Remove default underline */
-  transition: color 0.3s ease; /* Smooth transition for color changes */
-}
-
-/* Hover effect for the 'a' element */
-a:hover {
-  color: #004466; /* Change text color on hover */
-}

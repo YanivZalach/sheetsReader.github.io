@@ -1,24 +1,67 @@
-# Spreadsheet Viewer in Javascript
+# Web Excel and CSV Reader
 
-Creating a javascript exel and csv file viewer that is using a web interface.
+## Overview
 
-This is a basic app, so in the case the spreadsheet has more then one sheet, it will only disply the first one.
+This web application allows users to effortlessly view and interact with Excel (.xlsx) and CSV files directly in their browser. Built using JavaScript and powered by Vite, this lightweight and efficient tool ensures a seamless experience for users who need quick access to spreadsheet data without the need for external software.
 
-Great when you wnat to look at the data and don't want to modify it, such when doing data analyses in python, exc.
+Great when you want to look at the data and don't want to modify it, such when doing data analyses in python, exc.
 
 Or in cases of a weak computer and wont to see a spreadsheet and work on the same time in the web.
 
 Or if you don't have an office to work with.
 
+For using follow the [LINK](https://yanivzalach.github.io/sheetsReader.io/).
 
-## Tools Used
+Or search: `https://yanivzalach.github.io/sheetsReader.io`.
 
-For deployment i used `vite`.
+## Usage
 
-Written in vanilla JS.
+Click the `Chose File` button and select the Excel or CSV file you want to view.
 
-Used to handle data from `csv` and `xlsx` files:
+## Features
 
-```bash
-npm install xlsx
-```
+- **Excel and CSV Support**: Easily upload and view Excel (.xlsx) and CSV files.
+- **Browser-Based**: No need to install additional software – view your files directly in your browser.
+- **Responsive Design**: The application is designed to provide an optimal viewing experience across various devices and screen sizes.
+- **Fast and Efficient**: Utilizing Vite for speedy development and performance optimization.
+
+## Using locally
+
+For those how want to use this project locally follow the following steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/YanivZalach/sheetsReader.io.git ~/Documents/sheetsReader
+   ```
+
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd ~/Documents/sheetsReader
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+    ```bash
+    npm install xlsx
+    ```
+
+4. **Run the Application:**
+   ```bash
+   npm run dev
+   ```
+
+   This will start the development server. Follow the output given link for use.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [Vite](https://vitejs.dev/) - Fast, optimized frontend build tool.
+- xlsx - JavaScript spreadsheet library for reading and writing Excel and CSV files.
+
+Enjoy exploring and interacting with your spreadsheet data using the Web Excel and CSV Reader!
