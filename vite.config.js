@@ -2,11 +2,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // other configurations...
 
   build: {
     // Set the correct base URL here
-    base: '/your-app-name/', // Replace 'your-app-name' with the actual path
+    base: 'https://yanivzalach.github.io/sheetsReader.io/', 
   },
 });
 
