@@ -9,20 +9,35 @@ export async function outCsvFile(file,resultElement){
 		// Adding numbers to find locations in the file
 		file = addNumToFile(file);
 		print(file);
+		const table = document.createElement('table');  // Table of the sheet
+		const tableHead = document.createElement('thead');  // Head of the table
+		const tableBody = document.createElement('tbody');  // Body of the table
 		// Creating list for each of the rows
 		for(let row = 0; row<file.length;row++){
-			const table = document.createElement('table');  // List to after add the columns
+			const table_row = document.createElement('tr');  // List to after add the columns
 			for(let column = 0; column<file[row].length;column++){
-				const td = document.createElement('td');  // List element
+				let cell;
+				if(column === 0 || row === 0){  // Number
+					cell = document.createElement('th');  // List element
+				} else{
+					cell = document.createElement('td');  // List element
+				}
 				// Adding the data
-				td.innerHTML = file[row][column];
+				cell.innerHTML = file[row][column];
 				print(file[row][column])
 				// Appending to the list
-				table.appendChild(td);
+				table_row.appendChild(cell);
 			}
-			// Adding the list to the 'resultElement'
-			resultElement.appendChild(table);
+			// Adding the table
+			if(row === 0){  // Numbers and not the sheet
+				tableHead.appendChild(table_row);  // Adding to the body
+			} else {
+				tableBody.appendChild(table_row);  // Adding to the body
+			}
 		}
+		table.appendChild(tableHead);
+		table.appendChild(tableBody);
+		resultElement.appendChild(table);  // Adding The table
 		resultElement.appendChild(document.createElement('hr'));  // Adding a stop between tables
 	} else {  // Didn't got a file
 		print("File not chosen");
