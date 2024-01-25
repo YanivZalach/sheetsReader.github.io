@@ -23,7 +23,7 @@ export async function outCsvFile(file,resultElement){
 					cell = document.createElement('td');  // List element
 				}
 				// Adding the data
-				cell.innerHTML = file[row][column];
+				cell.innerText = file[row][column];
 				print(file[row][column])
 				// Appending to the list
 				table_row.appendChild(cell);
@@ -51,7 +51,7 @@ export function addNameH2(name,resultElement){
 		print(name);
 		const h2 = document.createElement('h2');  // Creating h2 element
 		h2.id = name;  // Adding an id
-		h2.innerHTML = name;  // Adding the name to the element
+		h2.innerText = name;  // Adding the name to the element
 		resultElement.appendChild(h2);  // Adding the element to the dom
 	} else {  // Didn't got a name
 		print("Name not given");
