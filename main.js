@@ -18,7 +18,7 @@ const resultElement = document.getElementById(resultName);
 
 
 // Inside your script tag in main.js
-document.getElementById('fileInput').addEventListener('change',() => {
+fileInput.addEventListener('change',() => {
 	workFile(fileInput,resultElement);
 });
 
