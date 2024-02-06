@@ -10,9 +10,9 @@ Or in cases of a weak computer and wont to see a spreadsheet and work on the sam
 
 Or if you don't have an office to work with.
 
-For using follow the [LINK](https://yanivzalach.github.io/sheetsReader.io/).
+For using follow the [LINK](https://yanivzalach.github.io/sheetsReader.github.io/).
 
-Or search: `https://yanivzalach.github.io/sheetsReader.io`.
+Or search: `https://yanivzalach.github.io/sheetsReader.github.io`.
 
 ## Usage
 
@@ -31,7 +31,7 @@ For those how want to use this project locally follow the following steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/YanivZalach/sheetsReader.io.git ~/Documents/sheetsReader
+   git clone https://github.com/YanivZalach/sheetsReader.github.io.git ~/Documents/sheetsReader
    ```
 
 2. **Navigate to the Project Directory:**
