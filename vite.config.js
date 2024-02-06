@@ -3,6 +3,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     // Set the correct base URL here
-    base: '/sheetsReader.io/', 
+    base: '/sheetsReader.github.io/', 
 });
 
