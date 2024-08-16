@@ -41,12 +41,8 @@ For those how want to use this project locally follow the following steps:
 
 3. **Install Dependencies:**
    ```bash
-   npm install
+   npm i
    ```
-
-    ```bash
-    npm install xlsx
-    ```
 
 4. **Run the Application:**
    ```bash
